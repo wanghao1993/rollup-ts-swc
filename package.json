@@ -16,7 +16,8 @@
     "dev": "rimraf dist && rollup -c -w",
     "build": "rimraf dist && cross-env NODE_ENV=production rollup -c rollup.config.js",
     "commit": " git add . && git-cz",
-    "release": "npm run test && npm run build && standard-version"
+    "release": "npm run test && npm run build && standard-version",
+    "publish": "git push --follow-tags origin main && npm publish"
   },
   "lint-staged": {
     "*.{ts,js}": [
